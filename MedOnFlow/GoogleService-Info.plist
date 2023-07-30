@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:879733035086:ios:82bc36a6958fd62448331f</string>
+	<key>DATABASE_URL</key>
+	<string>https://medonflow-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
 </plist>

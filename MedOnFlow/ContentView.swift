@@ -11,6 +11,7 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var medications: [Medication]
+    @State private var addMedicationIsPresented = false
 
     var body: some View {
         NavigationSplitView {
@@ -32,7 +33,7 @@ struct ContentView: View {
 //                }
                 ToolbarItem {
                     Button {
-                        
+                        addMedicationIsPresented.toggle()
                     } label: {
                         Label("Add Item", systemImage: "plus")
                     }
@@ -41,6 +42,9 @@ struct ContentView: View {
         } detail: {
             Text("Select an item")
         }
+        .sheet(isPresented: $addMedicationIsPresented, content: {
+            NewMedicationView()
+        })
     }
 
 //    private func addItem() {

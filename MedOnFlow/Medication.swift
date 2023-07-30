@@ -10,13 +10,13 @@ import SwiftData
 
 @Model
 final class Medication {
-    @Attribute(.unique) let medId: String?
+    @Attribute(.unique) let medId: Int?
     let name: String?
     
     var quantity: Int?
-    var timeNotify: DateComponents?
+    var timeNotify: Date?
     
-    init(name: String, medId: String, quantity: Int, timeNotify: DateComponents) {
+    init(name: String, medId: Int, quantity: Int, timeNotify: Date) {
         self.name = name
         self.medId = medId
         self.quantity = quantity

@@ -20,7 +20,7 @@ struct MedOnFlowApp: App {
                 SignInView(viewModel: viewModel)
             case .signedIn:
                 ContentView()
-                    .modelContainer(for: Item.self)
+                    .modelContainer(for: Medication.self)
             case .loading:
                 EmptyView()
             }
