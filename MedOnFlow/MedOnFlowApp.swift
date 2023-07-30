@@ -7,14 +7,23 @@
 
 import SwiftUI
 import SwiftData
+import Observation
 
 @main
 struct MedOnFlowApp: App {
-
+    @Bindable private var viewModel = AuthenticationViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch viewModel.signInState {
+            case .notSignedIn:
+                SignInView(viewModel: viewModel)
+            case .signedIn:
+                ContentView()
+                    .modelContainer(for: Item.self)
+            case .loading:
+                EmptyView()
+            }
         }
-        .modelContainer(for: Item.self)
     }
 }
