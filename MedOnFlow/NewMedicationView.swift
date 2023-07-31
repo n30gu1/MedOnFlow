@@ -21,16 +21,7 @@ struct NewMedicationView: View {
             case .success:
                 List {
                     ForEach(viewModel.medicationsFiltered, id: \.id) { med in
-                        Button {
-                            if let item = currentMedications.filter({ $0.medId == med.id || $0.name == med.name }).first {
-                                item.quantity! += med.dose
-                                dismiss()
-                            } else {
-                                let newMedication = Medication(name: med.name, medId: med.id, quantity: med.dose, timeNotify: Date())
-                                modelContext.insert(newMedication)
-                                dismiss()
-                            }
-                        } label: {
+                        NavigationLink(destination: NewMedicationDetailView(viewModel: self.viewModel, medications: currentMedications, medicationInfo: med)) {
                             Text(med.name)
                         }
                     }
