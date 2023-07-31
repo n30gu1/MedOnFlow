@@ -22,6 +22,11 @@ struct ContentView: View {
 //                    } label: {
 //                        Text(item.timestamp ?? Date(), format: Date.FormatStyle(date: .numeric, time: .standard))
 //                    }
+                    HStack {
+                        Text(item.name ?? "nil")
+                        Spacer()
+                        Text("\(item.quantity ?? 0)")
+                    }
                 }
                 .onDelete { indexSet in
                     
@@ -39,11 +44,13 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("Medications")
         } detail: {
             Text("Select an item")
         }
         .sheet(isPresented: $addMedicationIsPresented, content: {
-            NewMedicationView()
+            NewMedicationView(currentMedications: self.medications)
+                .modelContainer(for: Medication.self)
         })
     }
 
