@@ -12,6 +12,7 @@
 		B220D2342A76A4AE0039643D /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B220D2332A76A4AE0039643D /* LoadingState.swift */; };
 		B220D2362A76B3230039643D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B220D2352A76B3230039643D /* GoogleService-Info.plist */; };
 		B22B6AA22A76386400B3739A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6AA12A76386400B3739A /* SignInView.swift */; };
+		B26F0E0A2A786BCA00C2573C /* NewMedicationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F0E092A786BCA00C2573C /* NewMedicationDetailView.swift */; };
 		B27BFF7A2A76213500881D54 /* MedOnFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BFF792A76213500881D54 /* MedOnFlowApp.swift */; };
 		B27BFF7C2A76213500881D54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BFF7B2A76213500881D54 /* ContentView.swift */; };
 		B27BFF802A76213900881D54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27BFF7F2A76213900881D54 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		B220D2332A76A4AE0039643D /* LoadingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		B220D2352A76B3230039643D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B22B6AA12A76386400B3739A /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		B26F0E092A786BCA00C2573C /* NewMedicationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMedicationDetailView.swift; sourceTree = "<group>"; };
 		B27BFF762A76213500881D54 /* MedOnFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedOnFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27BFF792A76213500881D54 /* MedOnFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedOnFlowApp.swift; sourceTree = "<group>"; };
 		B27BFF7B2A76213500881D54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				B2AD57A02A76376100FFDEFB /* User.swift */,
 				B22B6AA12A76386400B3739A /* SignInView.swift */,
 				B286A66B2A76A0F600842EFE /* NewMedicationView.swift */,
+				B26F0E092A786BCA00C2573C /* NewMedicationDetailView.swift */,
 				B27C94C32A76A1B8001D12C2 /* NewMedicationViewModel.swift */,
 				B220D2332A76A4AE0039643D /* LoadingState.swift */,
 				B27BFF7F2A76213900881D54 /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 				B28C2AD12A76232600ACE54C /* Medication.swift in Sources */,
 				B2AD57A12A76376100FFDEFB /* User.swift in Sources */,
 				B27BFF7C2A76213500881D54 /* ContentView.swift in Sources */,
+				B26F0E0A2A786BCA00C2573C /* NewMedicationDetailView.swift in Sources */,
 				B286A66C2A76A0F700842EFE /* NewMedicationView.swift in Sources */,
 				B27BFF7A2A76213500881D54 /* MedOnFlowApp.swift in Sources */,
 			);
