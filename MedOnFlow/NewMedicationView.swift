@@ -24,12 +24,10 @@ struct NewMedicationView: View {
                         Button {
                             if let item = currentMedications.filter({ $0.medId == med.id || $0.name == med.name }).first {
                                 item.quantity! += med.dose
-                                try! self.modelContext.save()
                                 dismiss()
                             } else {
                                 let newMedication = Medication(name: med.name, medId: med.id, quantity: med.dose, timeNotify: Date())
                                 modelContext.insert(newMedication)
-                                try! self.modelContext.save()
                                 dismiss()
                             }
                         } label: {

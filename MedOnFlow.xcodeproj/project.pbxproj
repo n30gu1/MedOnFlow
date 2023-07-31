@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20B4B7E2A77B586005CDCCE /* MedicationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20B4B7D2A77B586005CDCCE /* MedicationDetailViewModel.swift */; };
 		B20D30552A7630C500D2B858 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D30542A7630C500D2B858 /* AuthenticationViewModel.swift */; };
 		B220D2342A76A4AE0039643D /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B220D2332A76A4AE0039643D /* LoadingState.swift */; };
 		B220D2362A76B3230039643D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B220D2352A76B3230039643D /* GoogleService-Info.plist */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B20B4B7D2A77B586005CDCCE /* MedicationDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationDetailViewModel.swift; sourceTree = "<group>"; };
 		B20D30542A7630C500D2B858 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		B220D2332A76A4AE0039643D /* LoadingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		B220D2352A76B3230039643D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				B27BFF792A76213500881D54 /* MedOnFlowApp.swift */,
 				B27BFF7B2A76213500881D54 /* ContentView.swift */,
 				B29A5C832A764714001139FC /* MedicationDetailView.swift */,
+				B20B4B7D2A77B586005CDCCE /* MedicationDetailViewModel.swift */,
 				B28C2AD02A76232600ACE54C /* Medication.swift */,
 				B20D30542A7630C500D2B858 /* AuthenticationViewModel.swift */,
 				B2AD57A02A76376100FFDEFB /* User.swift */,
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20B4B7E2A77B586005CDCCE /* MedicationDetailViewModel.swift in Sources */,
 				B27C94C42A76A1B8001D12C2 /* NewMedicationViewModel.swift in Sources */,
 				B29A5C842A764715001139FC /* MedicationDetailView.swift in Sources */,
 				B220D2342A76A4AE0039643D /* LoadingState.swift in Sources */,
@@ -410,6 +414,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ld64";
 				PRODUCT_BUNDLE_IDENTIFIER = com.n30gu1.MedOnFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -441,6 +446,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ld64";
 				PRODUCT_BUNDLE_IDENTIFIER = com.n30gu1.MedOnFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
