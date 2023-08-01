@@ -15,6 +15,8 @@ struct NewMedicationDetailView: View {
     
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var modelContext
+    
+    @State private var mapPosition: MapCameraPosition = .userLocation(followsHeading: true, fallback: .automatic)
 
     var body: some View {
         Form {
@@ -52,8 +54,12 @@ struct NewMedicationDetailView: View {
                 }
             }
             Section("Get From Pharmacy") {
-                Map {
+                Map(position: $mapPosition) {
                     Marker("Pharmacy", coordinate: CLLocationCoordinate2D(latitude: 35.913969, longitude: 128.819614))
+                }
+                .mapStyle(.standard(elevation: .realistic))
+                .mapControls {
+                    MapUserLocationButton()
                 }
                 .aspectRatio(1.0, contentMode: .fill)
             }
