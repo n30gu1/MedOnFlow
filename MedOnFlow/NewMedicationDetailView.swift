@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct NewMedicationDetailView: View {
     var viewModel: NewMedicationViewModel
     var medications: [Medication]
     var medicationInfo: MedicationInfo
     
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var modelContext
 
     var body: some View {
@@ -20,10 +21,21 @@ struct NewMedicationDetailView: View {
             Section("Medication Information") {
                 HStack {
                     Text("Name")
+                        .bold()
                     Spacer()
                     Text(medicationInfo.name)
                 }
-                
+                HStack {
+                    Text("Doses")
+                        .bold()
+                    Spacer()
+                    Text("\(medicationInfo.dose)")
+                }
+            }
+            Section("Cautions") {
+                ForEach(medicationInfo.cautions, id: \.self) {
+                    Text($0)
+                }
             }
             Section("Purchase") {
                 Button {
@@ -39,7 +51,14 @@ struct NewMedicationDetailView: View {
                     Text("Purchase \(medicationInfo.name)")
                 }
             }
+            Section("Get From Pharmacy") {
+                Map {
+                    Marker("Pharmacy", coordinate: CLLocationCoordinate2D(latitude: 35.913969, longitude: 128.819614))
+                }
+                .aspectRatio(1.0, contentMode: .fill)
+            }
         }
+        .navigationTitle(medicationInfo.name)
     }
 }
 

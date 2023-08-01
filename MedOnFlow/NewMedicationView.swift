@@ -21,7 +21,7 @@ struct NewMedicationView: View {
             case .success:
                 List {
                     ForEach(viewModel.medicationsFiltered, id: \.id) { med in
-                        NavigationLink(destination: NewMedicationDetailView(viewModel: self.viewModel, medications: currentMedications, medicationInfo: med)) {
+                        NavigationLink(destination: NewMedicationDetailView(viewModel: self.viewModel, medications: currentMedications, medicationInfo: med, dismiss: _dismiss)) {
                             Text(med.name)
                         }
                     }
